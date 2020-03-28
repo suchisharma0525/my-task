@@ -46,13 +46,28 @@
     }
     
     table {
-        padding-left: 310px;
-        padding-top: 20px;
+        border-spacing:0px;
+        padding-top:20px;
+        margin-left:auto;
+        margin-right:auto;
+       
     }
     
-    td {
+    td,th {
         border: 1px solid blue;
+        padding-top:5px;
+        padding-bottom:5px;
+        padding-left:80px;
+        padding-right:80px;
     }
+    thead{background-color:powderblue;}
+    
+    tbody td{background-color:#cdd4e2c2;}
+    
+    tr:nth-chilf(even){background-color:#e0e6d1c2;}
+    
+    form{margin-left:auto;margin-right:auto;}
+    
 </style>
 
 <body>
@@ -66,8 +81,8 @@
         <table id="myTable">
             <thead>
                   <tr>
-                      <td>First Name</td>
-                      <td>Last Name</td>
+                      <th>First Name</th>
+                      <th>Last Name</th>
                 </tr>
             </thead>
             <tbody id="table_body"></tbody>
@@ -78,7 +93,7 @@
     function save() {
         var first_name_value=document.getElementById("first_name").value;
         var last_name_value=document.getElementById("last_name").value;
-        var table = document.getElementById("myTable");
+        var table = document.getElementById("table_body");
         var row = table.insertRow(0);
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
