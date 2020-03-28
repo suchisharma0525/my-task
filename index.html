@@ -46,53 +46,58 @@
     }
     
     table {
-        border-spacing:0px;
-        padding-top:20px;
-        margin-left:auto;
-        margin-right:auto;
-       
+	  border-spacing:0px;
+      padding-top: 20px;
+      margin-left:auto;
+	  margin-right:auto;
+		
     }
     
-    td,th {
-        border: 1px solid blue;
+    td,th
+     	{
+        border:1px solid black;
         padding-top:5px;
-        padding-bottom:5px;
-        padding-left:80px;
-        padding-right:80px;
-    }
-    thead{background-color:powderblue;}
-    
-    tbody td{background-color:#cdd4e2c2;}
-    
-    tr:nth-chilf(even){background-color:#e0e6d1c2;}
-    
-    form{margin-left:auto;margin-right:auto;}
-    
+		padding-bottom:5px;
+		padding-left:80px;
+		padding-right:80px;
+		}
+		
+	thead{background-color:powderblue;}
+	
+	tbody td{background-color:#cdd4e2c2;}
+	
+	tr:nth-child(even){background-color:#e0e6d1c2;}
+	
+	form{margin-left:auto;margin-right:auto;}
 </style>
 
 <body>
     <div class="main-div">
         <form action="">
             <h1>My form</h1>
-            First Name : <input type="text" id="first_name" placeholder="first name"><br><br> Last Name : <input type="text" id="last_name" placeholder="last name"><br><br>
+            First Name :
+			<input type="text" id="first_name" placeholder="first name"></br></br> 
+			Last Name :
+			<input type="text" id="last_name" placeholder="last name"><br><br>
             <button type="button" onclick="save()">Save</button>
         </form>
 
         <table id="myTable">
             <thead>
-                  <tr>
-                      <th>First Name</th>
-                      <th>Last Name</th>
-                </tr>
-            </thead>
-            <tbody id="table_body"></tbody>
+			   <tr>
+			     <th>First Name</th>
+				 <th>Last Name</th>
+			   
+			   </tr>
+			</thead>
+			<tbody id="table_body"></tbody>
         </table>
     </div>
 </body>
 <script>
     function save() {
-        var first_name_value=document.getElementById("first_name").value;
-        var last_name_value=document.getElementById("last_name").value;
+        var first_name_value = document.getElementById("first_name").value;
+        var last_name_value = document.getElementById("last_name").value;
         var table = document.getElementById("table_body");
         var row = table.insertRow(0);
         var cell1 = row.insertCell(0);
