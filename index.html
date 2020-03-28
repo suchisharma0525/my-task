@@ -64,21 +64,26 @@
         </form>
 
         <table id="myTable">
-            <tr>
-            </tr>
+            <thead>
+                  <tr>
+                      <td>First Name</td>
+                      <td>Last Name</td>
+                </tr>
+            </thead>
+            <tbody id="table_body"></tbody>
         </table>
     </div>
 </body>
 <script>
     function save() {
-        
-
+        var first_name_value=document.getElementById("first_name").value;
+        var last_name_value=document.getElementById("last_name").value;
         var table = document.getElementById("myTable");
         var row = table.insertRow(0);
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
-        cell1.innerHTML = "new cell 1";
-        cell2.innerHTML = "new cell 2";
+        cell1.innerHTML = first_name_value;
+        cell2.innerHTML = last_name_value;
     }
 </script>
 
